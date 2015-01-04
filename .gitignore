@@ -6,3 +6,5 @@ _site/
 *~
 bourbon/
 Gemfile.lock
+_config-dev.yml
+Rakefile
