@@ -10,7 +10,7 @@ This blog is built with:
 
 1. [Fork](https://github.com/haixuanc/haixuanc.github.io/fork) this repository.
 2. Clone it: https://github.com/YOUR-USERNAME/haixuanc.github.io.
-3. If you completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
+3. If you are completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
 4. Change your directory into cloned repository. 
 5. Run `bundle install`
 7. Run the jekyll server by: `bundle exec jekyll serve --baseurl ''` or `rake preview`   
