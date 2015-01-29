@@ -3,7 +3,7 @@ layout: post
 title:  "HTTP Forms"
 date:   2015-01-29 20:00:00
 categories:
-- HTTP
+- HTTP, HTML
 ---
 
 ## A Basic Form
