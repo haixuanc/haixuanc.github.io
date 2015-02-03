@@ -43,7 +43,7 @@ resolves to
 /var/www/my-site/path-to/page-that/I-am-currently-browsing/images/surprise.png
 ```
 
-### Protocol-less URLs
+### Scheme-less URLs
 
 ``` html
 //external-site.com/images/surprisepng
@@ -52,9 +52,9 @@ resolves to
 ``` html
 http/https://external-site.com/images/surprisepng
 ```
-depending on the protocol used by the server who is serving the containing webpage.
+depending on the scheme used by the server who is serving the containing webpage.
 
-Protocol-less URLs can avoid the attempts of sending request over HTTP while the containing webpage is being served over HTTPS.
+Scheme-less URLs can avoid the attempts of sending request over HTTP while the containing webpage is being served over HTTPS.
 
 ## References
 
