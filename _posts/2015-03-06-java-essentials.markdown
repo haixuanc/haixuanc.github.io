@@ -191,6 +191,8 @@ Normally, you would put code to initialize an instance variable in a constructor
 	}
 	```
 
+### Nested Classes
+
 ## References
 
 - [The Java Tutorials: Classes and Objects, Oracle](http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
