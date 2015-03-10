@@ -193,6 +193,88 @@ Normally, you would put code to initialize an instance variable in a constructor
 
 ### Nested Classes
 
+Nested classes
+	|__ Static nested classes 
+	|__ Inner classes
+		|__ Local classes
+		|__ Anonymous classes
+
+```java
+class OuterClass {
+	static class StaticNestedClass {
+		...
+	}
+	
+	class InnerClass {
+		...
+	}
+}
+```
+
+- As a member of the outer class, a nested class can be declared `private`, `public`, `protected`, or *package private*.
+
+#### Static Nested Classes
+
+- As with class methods and variables, a static nested class is associated with its outer class.
+- A static nested class cannot refer directly to instance variables or methods defined in tis enclosing class: it can use them only through an object reference.
+- A staic nest class interacts with the instance members of its outer class (and other classes) just like any other top-level class. In effect, a static nested class is behaviorally a top-level class that has been nested in another top-level class for packaging convenience.
+
+Styntax of creating an instance of a static nested class:
+
+```java
+OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
+```
+
+#### Inner Classes
+
+- As with instance methods and variables, an inner class is associated with an instance of its enclosing class.
+- An inner class has direct access to that object's methods and fields.
+- Because an inner class is associated with an instance, it cannot define any static memebers itself.
+- Objects that are instances of an innner class exit *within* an intance of the outer class.
+- There are two special kinds of inner classes:
+	- local classes
+	- anonymous classes
+- Serializing inner classes is strongly discouraged.
+
+To instantiate an inner class, you must first instantiate the outer class. Then, create the inner object within the outer object with this syntax:
+
+```java
+OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+```
+
+##### Local Classes
+
+Local classes are classes that defined in a *block*. You typically find local classes defined in the body of a method.
+
+- A local class can only access *local variables* that are decalred `final` or *effectively final*. (A variable or parameter whose value is never changed after it is initialized is effectively final.)
+- Local classes cannot define or declare any *static* members. Local classes are non-static because they have access to instance members of the enclosing block. Consequently, they cannot contain most kinds of static declarations.
+- You cannot declarean *interface* inside a block; interfaces are inherently static.
+- You cannot decalre *static initializers* or *member interfaces* in a local class.
+- A local class can have static members provided that they are *contant variables*. ( A *constant variable* is a variable of primitive type or type `String` that is declared `final` and initialized with a compile-time constant expression.)
+
+##### Anonymous Classes
+
+While local classes are class declarations, anonymous classes are expressions, which means that you define the class in another expression.
+
+```java
+HelloWorld freshGreeting = new HelloWorld() {
+	String name = "tout le monde";
+	public void greet() {
+		greetSomeone("tout le monde");
+	}
+	public void greetSomeone(String someone) {
+		name = someone;
+		System.out.println("Salut " + name);
+	}
+};
+```
+
+- An anonymous class has access to the members of its enclosing class.
+- An anonymous class cannot access local variables in its enclosing scope that are not declared as `final` or *effectively final*.
+- You cannot declare static initializers or member interfaces in an anonymous class.
+- An anonymous class can have static members provided that they are constant variables.
+- You cannot declare constuctors in an anonymous class.
+
 ## References
 
 - [The Java Tutorials: Classes and Objects, Oracle](http://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
