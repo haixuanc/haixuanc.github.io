@@ -11,6 +11,7 @@ categories:
 ## Part 1: Device Pixels vs CSS Pixels
 
 Device pixels are the physical pixels of the display.
+
 - Modern browsers implement zooming as "stretching up" CSS pixels. 
 - Zooming in results in less CSS pixels being able to fit into the display.
 - Zooming out results in more CSS pixels being able to fit into the display.
@@ -41,7 +42,12 @@ Device pixels are the physical pixels of the display.
 
 If user zooms in you get less space available in the window, and `window.innerWidth` and `window.innerHeight` decrease because they are measured in CSS pixels.
 
-## Viewport Size
+### Viewport Size
+
+`document.documentElement.clientWidth` and `document.documentElement.clientHeight`
+They don't count scrollbars.
+
+#### What is Viewport
 
 Viewport is the element that contains the `document` object.
 
@@ -50,9 +56,12 @@ Viewport is the element that contains the `document` object.
 
 Normally, all block-level elements take 100% of the width/height of their parent. So the `<body>` is as wide as the `<html>`. And the `<html>` is as wide as the viewport. If viewport has the same dimension as the browser window, the `<body>` gets the same dimension as the browser window. Interesting thing will happen when user zooms in and the browser window is not big enough to hold the document and scrollbars show up, because at that time the viewport is not the same as the browser window, it is actually smaller than the browser window.
 
-Viewport size can be obtained by:
-`document.documentElement.clientWidth` and `document.documentElement.clientHeight`
-They don't count scrollbars.
+### `<html>` Size
+
+`document.documentElement.offsetWidth` and `document.documentElement.offsetHeight`
+
+- These properties truly give you access to the `<html>` element as a block-level element.
+- If you set CSS property like `width`, `document.documentElement.offsetWidth` will reflect it.
 
 ---
 
@@ -65,7 +74,32 @@ They don't count scrollbars.
 
 If user zooms in after scrolling the page up, the browser keeps the top-left point of the `document` untouched in browser window and stretches out all CSS pixels. Therefore `window.pageXOffset` or `window.pageYOffset` does not change.
 
+---
 
+## Part 4: Event Coordinates
+
+When a mouse event occurs, no less than five property pairs are exposed to give you information about where exactly it happened.
+
+1. `pageX/Y` gives the coordinates relative to the `<html>` element in CSS pixels.
+2. `clientX/Y` gives the coordinates relative to the *viewport* in CSS pixels.
+3. `screenX/Y` gives the coordinates relative to the *screen* in device pixels.
+
+---
+
+## Part 5: Media Queries
+
+```css
+@media all and (max-width: 400px) {
+	...
+}
+```
+
+What width is the `max-width: 400px` measuring against? There are two relevant media queties:
+
+- `width/height` uses the same values as `document.documentElement.clientWidth/Height`, the viewport in other words. It works in CSS pixels.
+- `device-width/-height` uses the same values as `screen.width/height`, the screen in other words. It works in device pixels.
+
+---
 
 ## References
 
