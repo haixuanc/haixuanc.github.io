@@ -77,6 +77,13 @@ $ git pull <remote_name> <remote_branch_name>
 $ git pull origin master
 ```
 
+Replace local with remote:
+```bash
+$ git fetch origin
+$ git reset --hard origin/master
+```
+It will drop all your local changes and commits, fetch the latest history from the server and point your local `master` branch at remote's `origin/master`.
+
 ### Differenting
 
 Diff working copy with last commit:
