@@ -65,7 +65,7 @@ $ git remote add origin https://github.com/some-repo.git
 
 Push to remote:
 ```bash
-$ git push -u <remote_name> <remote_branch_name>
+$ git push -u <remote_name> <local_branch_name>
 $ git push -u origin master
 ```
 `-u` tells Git to remember the parameters, so next time we can simply run `$ git push`.
@@ -123,6 +123,13 @@ $ git merge <branch_name> // do the merge
 $ git commit -m 'Merge changes from <branch_name> to master...'
 $ git push // push changes from local to remote
 $ git branch -d <branch_name> // done with the branch, delete it now
+```
+
+Push branch to remote:
+(a branch only lives locally unless you push it to the remote and make it accessible by others)
+```bash
+$ git push <remote_name> <branch_name>
+$ git push origin local-branch
 ```
 
 ## References
