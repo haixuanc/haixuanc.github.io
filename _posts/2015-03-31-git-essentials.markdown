@@ -65,15 +65,15 @@ $ git remote add origin https://github.com/some-repo.git
 
 Push to remote:
 ```bash
-$ git push -u <remote_name> <local_name>
+$ git push -u <remote_name> <remote_branch_name>
 $ git push -u origin master
 ```
 `-u` tells Git to remember the parameters, so next time we can simply run `$ git push`.
-The local repo has a default branch named `master`.
+The local/remote repo has a default branch named `master`.
 
 Pull from remote:
 ```bash
-$ git pull <remote_name> <local_name>
+$ git pull <remote_name> <remote_branch_name>
 $ git pull origin master
 ```
 
