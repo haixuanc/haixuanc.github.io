@@ -176,7 +176,39 @@ See only which files have changed:
 $ git log --name-status
 ```
 
+## Useful Hints
+
+Launch built-in GUI:
+```bash
+$ gitk
+```
+
+Use colorful git output:
+```bash
+$ git config color.ui true
+```
+
+Print log one line per commit:
+```bash
+$ git config format.pretty oneline
+```
+To unset this flag:
+```bash
+$ git config --unset format.pretty
+```
+To view help:
+```bash
+$ git config
+```
+
+Use interactive adding:
+```bash
+$ git add -i
+```
+
 ## References
 
 - [Try Git](https://try.github.io)
 - [Simple Git Guide](http://rogerdudler.github.io/git-guide/)
+- [A Visual Git Reference](http://marklodato.github.io/visual-git-guide/index-en.html)
+- [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
