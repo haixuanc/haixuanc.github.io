@@ -120,9 +120,15 @@ Merge changes from another branch to the `master` branch:
 $ git checkout master // switch back to master
 $ git merge <branch_name> // do the merge
 // resolve any conflicts...
+$ git add <some_resolved_files...>
 $ git commit -m 'Merge changes from <branch_name> to master...'
 $ git push // push changes from local to remote
 $ git branch -d <branch_name> // done with the branch, delete it now
+```
+
+Preview diffs between two branches:
+```bash
+$ git diff <branch_to_merge_from> <active_branch>
 ```
 
 Push branch to remote:
@@ -132,6 +138,38 @@ $ git push <remote_name> <branch_name>
 $ git push origin local-branch
 ```
 
+### Tagging
+
+It is recommended to create tags for software releases. This is a known concept which also exists in SVN.
+```bash
+$ git tag <tag_name> <commit_id>
+$git tag 1.0.0 1b2e1d63ff
+```
+The `<commit_id>` stands for the first 10 characters of a commit id.
+
+### History
+
+See commits by a certain author:
+```bash
+$ git log --author=<username>
+```
+
+See each commit in one line:
+```bash
+$ git log --pretty=oneline
+```
+
+See ASCII art tree of all branches:
+```bash
+$ git log --graph --oneline --decorate --all
+```
+
+See only which files have changed:
+```bash
+$ git log --name-status
+```
+
 ## References
 
 - [Try Git](https://try.github.io)
+- [Simple Git Guide](http://rogerdudler.github.io/git-guide/)
