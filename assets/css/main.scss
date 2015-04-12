@@ -543,34 +543,34 @@ Code snippets
 code, pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
-code {  
-  padding: .25em .5em;
-  font-size: 85%;
-  color: $base-08;
-  background-color: rgba($base-08, .1);
-}
-pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1em;
-  padding: 1em;
-  @include font-size(12px);
-  line-height: 1.4;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  code {
-    padding: 0;
-    font-size: 100%;
-    color: inherit;
-    background-color: transparent;
-  }
-
-  @include MQ(M) {
-    @include font-size(14px);
-  }
-}
+//code {  
+//  padding: .25em .5em;
+//  font-size: 100%;
+//  color: $base-08;
+//  background-color: rgba($base-08, .1);
+//}
+//pre {
+//  display: block;
+//  margin-top: 0;
+//  margin-bottom: 1em;
+//  padding: 1em;
+//  @include font-size(14px);
+//  line-height: 1.4;
+//  white-space: pre;
+//  white-space: pre-wrap;
+//  word-break: break-all;
+//  word-wrap: break-word;
+//  code {
+//    padding: 0;
+//    font-size: 100%;
+//    color: inherit;
+//    background-color: transparent;
+//  }
+//
+//  @include MQ(M) {
+//    @include font-size(14px);
+//  }
+//}
 
 .highlight {
   margin-bottom: 1em;
@@ -593,9 +593,9 @@ pre {
   background-color: transparent;
 }
 .gist .gist-file .gist-data {
-  font-size: 12px;
+  font-size: 14px;
   @include MQ(M) {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
   line-height: 1.4;
 }
