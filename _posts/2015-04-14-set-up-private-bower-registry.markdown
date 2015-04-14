@@ -138,7 +138,7 @@ $ cd /path/bower-consumer
 $ bower init
 ```
 
-Add entry `\"bower-demo\": \"1.0.0\"` to the `dependencies` section in the `bower.json` file.
+Add entry `"bower-sample": "1.0.0"` to the `dependencies` section in the `bower.json` file.
 
 Configure bower to use your private registry:
 
