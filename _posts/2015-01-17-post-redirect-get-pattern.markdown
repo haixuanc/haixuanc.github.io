@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Post/Redirect/Get Pattern"
 date:   2015-01-17 20:00:00
 categories:
