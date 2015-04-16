@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "HTTP Forms"
 date:   2015-01-29 20:00:00
 categories:
