@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Git Essentials"
 date: 2015-03-31 20:00:00
 categories:
