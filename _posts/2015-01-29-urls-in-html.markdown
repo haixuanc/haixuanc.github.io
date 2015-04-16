@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "URLs in HTML"
 date:   2015-01-29 20:00:00
 categories:
