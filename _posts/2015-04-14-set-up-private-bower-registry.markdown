@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Set Up a Private Bower Registry"
 date: 2015-04-14 20:00:00
 categories:
