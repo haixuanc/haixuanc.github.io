@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Java Essentials"
 date: 2015-03-06 20:00:00
 categories:
