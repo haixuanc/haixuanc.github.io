@@ -88,6 +88,8 @@ $ git pull <remote_name> <remote_branch_name>
 $ git pull origin master
 ```
 
+`git pull` is a `git fetch` followed by a `git merge`.
+
 Replace local with remote:
 
 ```bash
@@ -97,6 +99,29 @@ $ git reset --hard origin/master
 It will drop all your local changes and commits, fetch the latest history from the server and point your local `master` branch at remote's `origin/master`.
 
 ### Differenting
+
+Diff with a remote branch:
+
+```bash
+$ git diff <local branch> <remote-tracking branch>
+$ git diff master origin/master
+```
+
+Can push to remote?:
+
+```bash
+$ git status -sb
+
+// If contains the word `ahead` in the output, yes, there are commit to push.
+```
+
+Can commit locally?:
+
+```bash
+$ git diff-index --name-only --ignore-submodules HEAD --
+
+// If returns something, yes, there are some changes to commit.
+```
 
 Diff working copy with last commit:
 
