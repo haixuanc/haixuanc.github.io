@@ -264,6 +264,44 @@ Use interactive adding:
 $ git add -i
 ```
 
+## Syncing a fork
+
+List the current configured remote repositories for your fork:
+
+``` bash
+$ git remote -v
+```
+
+Specify a new remote *upstream* repository (e.g. the repository that you forked from) that will be synced with the fork:
+
+``` bash
+$ git remote add upstream <url-to-repository>.git
+```
+
+Verify the new upstream repository you've specified for your fork:
+
+``` bash
+$ git remote -v
+```
+
+Fetch the branches and their respective commit from the upstream repository. Commits to `master` will be stored in a local branch, `upstream/master`:
+
+``` bash
+$ git fetch upstream
+```
+
+Checkout your local `master` branch:
+
+``` bash
+$ git checkout master
+```
+
+Merge the changes from `upstream/master` into your local `master` branch:
+
+``` bash
+$ git merge upstream/master
+```
+
 ## References
 
 - [Try Git](https://try.github.io)
